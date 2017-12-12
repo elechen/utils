@@ -1,7 +1,7 @@
 #coding utf-8
 
 def main():
-	dMan2Cost = {"stw":0, "cxf":0, "gjq":0, "mxp":130, "lsx":170,}
+	dMan2Cost = {"stw":98, "cxf":0, "gjq":0, "mxp":50+34, "lsx":170,}
 	iSum = 0
 	for k, v in dMan2Cost.items():
 		iSum += v
@@ -13,8 +13,9 @@ def main():
 			lWhoCanGet.append([k,v])
 		elif v < fAvg:
 			lWhoNeedPay.append([k,v])
-	lWhoNeedPay.sort(key=lambda x: x[1])
+	# lWhoNeedPay.sort(key=lambda x: x[1])
 	lWhoCanGet.sort(key=lambda x: x[1], reverse=True)
+	print(dMan2Cost)
 	print("avg", fAvg)
 	sBill = ""
 	for x in lWhoCanGet:
